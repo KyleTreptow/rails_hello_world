@@ -8,7 +8,36 @@
 </head>
 <body>
 
+<header id="main-header">
+	<div class="container">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="<%= root_path %>">
+		        Test Rails App 
+		      </a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		    	<li><%= link_to 'home', root_path, :class => 'navlink' %></li>
+				<li><%= link_to 'Users', users_path, :class => 'navlink' %></li>
+				<li><%= link_to 'Blog', articles_path, :class => 'navlink' %></li>
+		    </ul>
+		  </div>
+		</nav>
+	</div>
+</header>
+
+<section class="content-section">
+<div class="container">
 <%= yield %>
+</div>
+</section>
+
+<footer id="main-footer">
+	<nav class="container">
+		<p>Footer Here</p>
+	</nav>
+</footer>
 
 </body>
 </html>
